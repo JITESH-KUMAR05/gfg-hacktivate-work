@@ -4,26 +4,86 @@ import { useInView } from 'react-intersection-observer';
 import { Parallax } from 'react-parallax';
 import Particles from 'react-particles';
 import { loadSlim } from "tsparticles-slim";
-import { Menu, X, Cpu, Radio, Wifi, Server } from 'lucide-react';
+import { Menu, X, Cpu, Radio, Wifi, Server, Satellite, Cable, Airplay, RadioTower, RefreshCcw, Plug, Waves, Battery, Bolt, Signal, Code } from 'lucide-react';
 
 const products = [
   {
-    title: "Portable Integrated Telemetry Tracking System",
+    title: "Telemetry Tracking Stations",
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800",
+    icon: <Satellite className="w-8 h-8" />, 
+    description: "Advanced telemetry tracking stations for precise data acquisition."
+  },
+  {
+    title: "Mil-Grade Missile Cable Assemblies",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800",
+    icon: <Cable className="w-8 h-8" />, 
+    description: "High-durability missile cable assemblies meeting military standards."
+  },
+  {
+    title: "Telemetry Sub-systems",
+    image: "https://images.unsplash.com/photo-1598889484010-a3bf4f77e527?w=800",
+    icon: <Cpu className="w-8 h-8" />, 
+    description: "Ground Telemetry Checkout Systems ensuring reliable performance."
+  },
+  {
+    title: "Airborne & Drone Telemetry Systems",
+    image: "https://images.unsplash.com/photo-1581092331646-d8e27c923b78?w=800",
+    icon: <Airplay className="w-8 h-8" />, 
+    description: "State-of-the-art airborne and drone telemetry solutions."
+  },
+  {
+    title: "High-Power RF Amplifiers",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
-    icon: <Radio className="w-8 h-8" />,
-    description: "Dual Channel Receiver, Bit Synchronizer, Frame Synchronizer, and Decommutator with Diversity Combiner"
+    icon: <RadioTower className="w-8 h-8" />, 
+    description: "Integration and supply of high-power RF amplifiers."
   },
   {
-    title: "SDR Solutions",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe7gcU4EYXd_oh32P5f8EylLIDPyqMQAi5ng&s",
-    icon: <Wifi className="w-8 h-8" />,
-    description: "IP Mesh MANET SDR with Video, Audio & Data capabilities"
+    title: "Ground Loop Back Units",
+    image: "https://images.unsplash.com/photo-1622467203530-d31e8649f86f?w=800",
+    icon: <RefreshCcw className="w-8 h-8" />, 
+    description: "Precision ground loop back units for signal testing."
   },
   {
-    title: "Rugged Computers",
-    image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
-    icon: <Server className="w-8 h-8" />,
-    description: "Ethernet Switches, Customized System Integration & Test Jig Modules"
+    title: "MIL-Grade Connectors",
+    image: "https://images.unsplash.com/photo-1607868382768-9bc4483b2ef9?w=800",
+    icon: <Plug className="w-8 h-8" />, 
+    description: "Micro-D, Nano-D, D-Sub, Circular & Micro-Circular connectors."
+  },
+  {
+    title: "MIL-Grade RF Cable Assemblies",
+    image: "https://images.unsplash.com/photo-1593642634367-d91a135587b5?w=800",
+    icon: <Waves className="w-8 h-8" />, 
+    description: "Reliable RF cable assemblies for military applications."
+  },
+  {
+    title: "MIL-Grade DC-DC Converters",
+    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800",
+    icon: <Battery className="w-8 h-8" />, 
+    description: "High-efficiency DC-DC converters built to military specifications."
+  },
+  {
+    title: "DC Programmable Power Supplies",
+    image: "https://images.unsplash.com/photo-1603732559578-972371d1a92a?w=800",
+    icon: <Bolt className="w-8 h-8" />, 
+    description: "Advanced DC programmable power supplies for precision control."
+  },
+  {
+    title: "RF & Microwave Components",
+    image: "https://images.unsplash.com/photo-1633356123271-9262a7b6b7c3?w=800",
+    icon: <Signal className="w-8 h-8" />, 
+    description: "High-performance RF & Microwave components."
+  },
+  {
+    title: "Customized Software for Defence",
+    image: "https://images.unsplash.com/photo-1593104547260-82b99c39b8b9?w=800",
+    icon: <Code className="w-8 h-8" />, 
+    description: "Bespoke software solutions designed for defense applications."
+  },
+  {
+    title: "Customized Rugged Computers & Networking Switches",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+    icon: <Server className="w-8 h-8" />, 
+    description: "Rugged computers and high-performance networking switches for military applications."
   }
 ];
 
@@ -231,6 +291,12 @@ function App() {
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300">
             Pioneering Electronics Solutions for Defence & Government Organizations
           </p>
+          <br /><br />
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300">
+
+          WE INTRODUCE OURSELVES AS "SRI DATTA ELECTRONICS PRIVATE LIMITED", A COMPANY INCORPORATED IN HYDERABAD BY US, A TEAM OF PROFESSIONALS FROM TECHNICAL AND ENGINEERING BACKGROUND, HAVING ABOUT FOURTEEN YEARS OF EXPERIENCE WITH DEFENCE & GOVERNMENT ORGANIZATIONS FOR A WIDE RANGE OF PRODUCTS AND SERVICES.
+          </p>
+
         </motion.div>
       </div>
 
@@ -247,7 +313,25 @@ function App() {
           <div className="max-w-4xl mx-auto text-white">
             <h2 className="text-4xl font-bold mb-8 text-center">About Us</h2>
             <p className="text-lg leading-relaxed">
-              We introduce ourselves as Sri Datta Electronics Private Limited, a company incorporated in Hyderabad by a team of professionals from technical and engineering backgrounds. Our fourteen years of experience with Defence & Government Organizations stand as a testament to our dedication to quality and innovation.
+            Sri Datta Electronics is the technology expertise Organization having dedicated techno-commercial professionals with many man-hour experience in providing services and solutions in the area of Satellite programs, defense, avionics, and other harsh environment applications where reliability is critical.
+
+Our engineering services capability has been established and proven with adequate expertise in the area of high-reliability components, RF & microwave components, and Telemetry subsystems.
+
+We are equipped with a good laboratory for our equipment’s calibrations.
+We have an internal Inventory Management System to maintain/update the Vendors.
+We generate Reports to our Vendors online for the respective job done & maintenance.
+Our team is dedicated to working under any circumstances, similar to 24x7 support.
+Presently, we have spread our workmanship to South India states & have a high ambition to spread across India.
+
+We are registered with all Defence Labs in India.
+
+We are working on the Design and Development of Electronic Sub-systems for DRDO.
+
+We have successfully developed software for the Ground Telemetry Checkout System under a Make in India program for DRDO, a Single Integrated Software for Dual Channel Receiver, Dual Bit Sync, and Dual Decom with Diversity Combiner, which is used for phase checks and flight trails and post-analysis of the flight trails.
+
+We are providing Drone-based Telemetry Tracking systems for low-altitude missile programs, to track the missile and real-time video data streaming.
+
+Now we are planning to enhance the tracking capabilities and wireless communication in the field of real-time telemetry tracking and video transmission for several Defence projects.
             </p>
           </div>
         </div>
@@ -289,34 +373,118 @@ function App() {
       </section>
 
       {/* Brochure Section */}
-<section id="brochure" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
-  <div className="container mx-auto px-4">
-    <h2 className="text-4xl font-bold mb-8 text-center text-white">Product Brochure</h2>
-    <div className="max-w-3xl mx-auto text-white text-lg leading-relaxed space-y-6">
-      <p>
-        Our brochure (sourced from our SDE_Product_Line.pdf) offers an in-depth view of our cutting-edge technologies, state-of-the-art products and innovative solutions. It encompasses detailed descriptions, technical specifications and the wide range of applications for our products.
-      </p>
-      <p>
-        <strong>Integrated Telemetry System:</strong> This solution provides robust dual-channel reception with built-in synchronizers and diversity combining, ensuring consistent performance in critical environments.
-      </p>
-      <p>
-        <strong>SDR Solutions:</strong> Our Software Defined Radio offerings empower secure, agile communication with support for video, audio and data, making them ideal for dynamic MANET environments.
-      </p>
-      <p>
-        <strong>Rugged Computers:</strong> Designed for resilience, our computers and network solutions are engineered for harsh operational conditions and mission-critical applications.
-      </p>
-      <div className="border border-dashed border-white p-4 text-center">
-        Image Placeholder – Brochure Cover
-      </div>
-      <div className="border border-dashed border-white p-4 text-center">
-        Image Placeholder – Product Details
-      </div>
-      <p>
-        For more detailed technical specifications and design philosophies, please refer to our brochure. This document reflects our commitment to quality and innovation, merging practical engineering with visionary technology.
-      </p>
-    </div>
-  </div>
-</section>
+      <section id="brochure" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-8 text-center text-white">Product Brochure</h2>
+          <div className="max-w-3xl mx-auto text-white text-lg leading-relaxed space-y-6">
+            <p>
+              Our brochure (sourced from our SDE_Product_Line.pdf) offers an in-depth view of our cutting-edge technologies,
+              state-of-the-art products and innovative solutions. It encompasses detailed descriptions, technical specifications and
+              the wide range of applications for our products.
+            </p>
+            <p>
+              <strong>Integrated Telemetry System:</strong> This solution provides robust dual-channel reception with built-in synchronizers
+              and diversity combining, ensuring consistent performance in critical environments.
+            </p>
+            <p>
+              <strong>SDR Solutions:</strong> Our Software Defined Radio offerings empower secure, agile communication with support for video,
+              audio and data, making them ideal for dynamic MANET environments.
+            </p>
+            <p>
+              <strong>Rugged Computers:</strong> Designed for resilience, our computers and network solutions are engineered for harsh
+              operational conditions and mission-critical applications.
+            </p>
+            <img 
+              src="https://images.unsplash.com/photo-1513451713350-dee890297c4a?w=800" 
+              alt="Brochure Cover" 
+              className="w-full rounded-md border-2 border-white"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1581020246766-78cf1b32d6de?w=800" 
+              alt="Product Details" 
+              className="w-full rounded-md border-2 border-white"
+            />
+            <p>
+              For more detailed technical specifications and design philosophies, please refer to our brochure. This document reflects
+              our commitment to quality and innovation, merging practical engineering with visionary technology.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Our Strengths Section */}
+      <section id="strengths" className="py-20 bg-gradient-to-b from-blue-900 to-black">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-8 text-center text-white">Our Strengths</h2>
+          <div className="max-w-3xl mx-auto text-white text-lg leading-relaxed space-y-6">
+            <p>
+              High reliability RF & microwave components & sub-systems.
+            </p>
+            <p>
+              Our in-depth knowledge of the products and applications, along with efficient and personalized service, enables us to build everlasting relationships with our customers and suppliers. We are continuously enhancing our product portfolio by keeping ourselves updated on new technological developments and market trends to help our customers find suitable solutions for their applications.
+            </p>
+            <p>
+              Offices at important locations in India and abroad within the proximity reach of the customers.
+            </p>
+            <p>
+              It is SDE strict policy on TQM (Total Quality Management) to meet or exceed customer requisites. It is SDE’s objective to operate and perform activities that fulfill total customer requirements in terms of technology to provide world-class service with cutting-edge solutions. The Company has a Quality Check program every day to monitor the jobs done & maintain quality objectives and infrastructures for effective operations. All these exercises will lead to continuous improvements & services. Also, if required, the Company will train personnel to maintain Quality objectives.
+            </p>
+            <h3 className="text-2xl font-bold mt-4">Measure of Quality:</h3>
+            <p>
+              Every week, the company will generate reports for quality considerations undertaken by the personnel, either from office automation, technical installations, or customer satisfaction on different levels, submitted by each employee. This will help the company measure the quality awareness within the organization for improvements.
+            </p>
+            <h3 className="text-2xl font-bold mt-4">Updating of Technology</h3>
+            <p>
+              Facilities provided to impart training to our employees/executives in the state-of-the-art technology.
+            </p>
+            <h3 className="text-2xl font-bold mt-4">TQM</h3>
+            <p>
+              The Company has externally hired TQM specialists who conduct Quality training programs often for the personnel. This training program will keep the personnel always in a positive direction when the work is undertaken.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Vision Section */}
+      <section id="vision" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-8 text-center text-white">Our Vision</h2>
+          <div className="max-w-3xl mx-auto text-white text-lg leading-relaxed space-y-6">
+            <p>
+              To become a market leader in products, services, and solutions in supporting the Indian space, Defence, and avionics industry. Sri Datta Electronics is committed to realizing this vision with four dedicated endeavors:
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Customer-friendly</li>
+              <li>Service excellence</li>
+              <li>Financial stability</li>
+              <li>Consistency</li>
+            </ul>
+            <p>
+              We are committed to integrating environmental and social issues into our business.
+            </p>
+            <p>
+              Our goal is to be the leader in providing the best support, quality, and services against customer requirements.
+            </p>
+            <p>
+              <strong>Focused Market Segment</strong>
+              <br />Defence
+              <br />Space
+              <br />Avionics
+            </p>
+            <p>
+              <strong>Business and Technology Partners</strong>
+              <br />1. Lumistar Inc, USA - <a href="https://lumi-star.com/contact/international-reps/" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">https://lumi-star.com/contact/international-reps/</a>
+            </p>
+            <p>
+              Earlier, Sri Datta Electronics was represented by L3 Communications, USA for Telemetry systems. As L3 Communications has completely closed the Telemetry group, now Sri Datta Electronics is representing Lumistar Inc, USA from 2019.
+            </p>
+            <p>
+              Yours sincerely,
+              <br />For Sri Datta Electronics Pvt. Ltd.
+            </p>
+          </div>
+        </div>
+      </section>
+
 
       {/* Contact Section */}
       <motion.section
